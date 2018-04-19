@@ -1,0 +1,14 @@
+/* Include.gradle configuration: http://docs.nativescript.org/plugins/plugins#includegradle-specification */
+
+android {
+	
+}
+
+allprojects {
+    repositories {
+        maven { url "https://jitpack.io" }
+    }
+}
+dependencies {
+    compile 'com.github.delight-im:Android-AdvancedWebView:v3.0.0'
+}
