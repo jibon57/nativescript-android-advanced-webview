@@ -85,4 +85,4 @@ You can get more events by extending WebViewClient or WebChromeClient class like
     Details here: https://github.com/delight-im/Android-AdvancedWebView
 ## License
 
-Apache License Version 2.0, January 2004
+MIT
