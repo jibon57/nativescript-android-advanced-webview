@@ -21,6 +21,7 @@ tns plugin add nativescript-android-advanced-webview
 ## Usage (Angular)
 
 ```javascript
+import { registerElement } from "nativescript-angular";
 registerElement("AdvanceWebview", () => require("nativescript-android-advanced-webview").AndroidAdvancedWebview);
 
 ngAfterViewInit() {
