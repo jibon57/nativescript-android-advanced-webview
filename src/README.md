@@ -46,6 +46,11 @@ ngAfterViewInit() {
 }
  ```
 
+ HTML:
+```javascript
+<AdvanceWebview id="webview" src="https://google.com"></AdvanceWebview>
+```
+
 
 Advance Configuration for WebViewClient or WebChromeClient class. You will need to implement your own customized override methods. You can do almost everything here :). You can install `tns-platform-declarations` for avoiding typescript error. Please check the demo for more details.
 
@@ -92,10 +97,6 @@ export class MyWebChromeClient extends android.webkit.WebChromeClient {
 }
 ```
 
-HTML:
-```javascript
-<AdvanceWebview id="webview" src="https://google.com"></AdvanceWebview>
-```
 
 ## API
 
