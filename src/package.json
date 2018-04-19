@@ -1,6 +1,6 @@
 {
     "name": "nativescript-android-advanced-webview",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "NativeScript Android Advanced Webview.",
     "main": "android-advanced-webview",
     "typings": "index.d.ts",
