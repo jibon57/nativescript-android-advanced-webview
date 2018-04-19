@@ -1,7 +1,7 @@
 {
     "name": "nativescript-android-advanced-webview",
-    "version": "1.0.1",
-    "description": "Your awesome NativeScript plugin.",
+    "version": "1.0.2",
+    "description": "NativeScript Android Advanced Webview.",
     "main": "android-advanced-webview",
     "typings": "index.d.ts",
     "nativescript": {
@@ -35,7 +35,7 @@
         "iOS"
     ],
     "author": {
-        "name": "Jibon > Costa",
+        "name": "Jibon L. Costa",
         "email": "jiboncosta57@gmail.com"
     },
     "bugs": {

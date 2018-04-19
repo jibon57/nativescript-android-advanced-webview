@@ -19,8 +19,8 @@ export class AndroidAdvancedWebview extends Common {
         return this.nativeView;
     }
     public createNativeView() {
-        const test = new AdvancedWebView(this._context);
-        return test;
+        const webview = new AdvancedWebView(this._context);
+        return webview;
     }
 
     public setUpWebViewClient(value: any) {
@@ -124,7 +124,7 @@ export class AndroidAdvancedWebview extends Common {
         }
 
         if (options.loadHtml) {
-            this.nativeView.loadHtml(value, preventCaching);
+            this.nativeView.loadHtml(value);
         } else {
             this.nativeView.loadUrl(value, preventCaching);
         }

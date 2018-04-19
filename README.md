@@ -54,6 +54,43 @@ advanceWebview.setUpWebViewClient(new MyWebViewTestClient()); //android.webkit.W
 advanceWebview.setUpWebChromeClient(new MyWebChromeClient()); //android.webkit.WebChromeClient
 ```
 
+Class can be extend like this:
+
+```javascript
+export class MyWebViewTestClient extends android.webkit.WebViewClient {
+
+    constructor() {
+        super();
+        return global.__native(this);
+    }
+    public onPageStarted(view: android.webkit.WebView, url: string, favicon: android.graphics.Bitmap): void {
+        console.log("onPageStarted: " + url);
+    }
+    public onPageFinished(view: android.webkit.WebView, url: string): void {
+        console.log("onPageFinished");
+    }
+    public onReceivedError(view: android.webkit.WebView, request, error): void {
+        console.log("onReceivedError");
+    }
+}
+
+export class MyWebChromeClient extends android.webkit.WebChromeClient {
+
+    constructor() {
+        super();
+        return global.__native(this);
+    }
+
+    public onReceivedTitle(view: android.webkit.WebView, title: string): void {
+        console.log(title);
+    }
+
+    public onPermissionRequest(request: any): void {
+        console.log("Permission asked !!");
+        request.grant(request.getResources());
+    }
+}
+```
 
 HTML:
 ```javascript
@@ -67,22 +104,24 @@ HTML:
 You can get more events by extending WebViewClient or WebChromeClient class like `onReceivedTitle`, `onPermissionRequest` (for allowing microphone) etc. This plugin also has some limitations too. You can check the library repository for more details.
 
 ```javascript 
-    android?: {
-        setGeolocationEnabled?: boolean;
-        addHttpHeader?: {
-            request: string;
-            value: string;
-        };
-        addPermittedHostname?: string;
-        preventCaching?: boolean;
-        setThirdPartyCookiesEnabled?: boolean;
-        setCookiesEnabled?: boolean;
-        setMixedContentAllowed?: boolean;
-        setDesktopMode?: boolean;
-        loadHtml?: boolean;
+android?: {
+    setGeolocationEnabled?: boolean;
+    addHttpHeader?: {
+        request: string;
+        value: string;
     };
+    addPermittedHostname?: string;
+    preventCaching?: boolean;
+    setThirdPartyCookiesEnabled?: boolean;
+    setCookiesEnabled?: boolean;
+    setMixedContentAllowed?: boolean;
+    setDesktopMode?: boolean;
+    loadHtml?: boolean;
+};
 ```
-    Details here: https://github.com/delight-im/Android-AdvancedWebView
+Details here: https://github.com/delight-im/Android-AdvancedWebView
 ## License
 
 MIT
+
+author: Jibon L. Costa
