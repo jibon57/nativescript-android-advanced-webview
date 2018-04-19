@@ -6,7 +6,7 @@
 This plugin will allow you to use some of advance feature of Android Webview. This plugin is using following library
 
 Android: [Android-AdvancedWebView
-](https://github.com/DroidNinja/Android-AdvancedWebView
+](https://github.com/delight-im/Android-AdvancedWebView
 )
 
 **Note:** I am not an expert of neigher iOS nor Android. So, please contribute if you think something you can do for better :) 
