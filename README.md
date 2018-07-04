@@ -63,7 +63,7 @@ advanceWebview.setUpWebChromeClient(new MyWebChromeClient()); //android.webkit.W
 Class can be extend like this:
 
 ```javascript
-export class MyWebViewTestClient extends android.webkit.WebViewClient {
+export class MyWebViewTestClient extends (android.webkit.WebViewClient as { new(): any; }) {
 
     constructor() {
         super();
@@ -80,7 +80,7 @@ export class MyWebViewTestClient extends android.webkit.WebViewClient {
     }
 }
 
-export class MyWebChromeClient extends android.webkit.WebChromeClient {
+export class MyWebChromeClient extends (android.webkit.WebChromeClient as { new(): any; }) {
 
     constructor() {
         super();
